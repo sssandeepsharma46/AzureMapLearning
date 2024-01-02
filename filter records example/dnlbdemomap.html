@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>
+            DNLB Azure Map Demo!
+        </title>
+         <link href="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.css" rel="stylesheet">
+        <script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.js"></script>
+        <script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas-service.min.js"></script>
+        <!-- Load JQuery UI -->
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        
+        <link href="/WebResources/dnlb_/css/azure-maps-layer-legend.min.css" rel="stylesheet">
+        <script src="/WebResources/dnlb_/scripts/azure-maps-layer-legend.min.js" type="text/javascript"></script>
+        <script src="/WebResources/dnlb_/scripts/dnlbloadmap.js" type="text/javascript"></script>
+<!--
+        <link href="azure-maps-layer-legend.min.css" rel="stylesheet">
+        <script src="azure-maps-layer-legend.min.js" type="text/javascript"></script>
+        <script src="dnlbloadmap.js" type="text/javascript"></script>
+-->
+        
+    </head>
+    
+    <style>
+        #myMap {
+            width: 100%;
+            height: 100%;
+        }
+        #divSearch {
+            margin: 5px;
+        }
+        #divFilter{
+            margin: 5px;
+            float: right;
+        }
+        select{
+            width: 150px;
+        }
+    </style>
+    
+    <body onload="dnlbMap.loadMap()">
+        <div id="divSearch">
+            <input type="text" id="searchAddress" style="width:750px" placeholder="Please search your address here...">
+        </div>
+        <div id="divFilter">
+            <label>Assets Status</label>
+            <select id="assetsstatus">
+                <option value="-1">--Select--</option>
+                <option value="1">Open</option>
+                <option value="2">In-Progress</option>
+                <option value="3">Closed</option>
+            </select>
+        </div>
+        <div id="myMap"></div>
+    </body>
+</html>
